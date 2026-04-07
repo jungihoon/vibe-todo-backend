@@ -15,7 +15,8 @@ const MONGO_URI =
 
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin:
+      /^http:\/\/localhost(:\d+)?$/,
   }),
 );
 app.use(express.json());
