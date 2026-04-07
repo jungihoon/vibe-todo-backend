@@ -15,8 +15,10 @@ const MONGO_URI =
 
 app.use(
   cors({
-    origin:
-      /^http:\/\/localhost(:\d+)?$/,
+    origin: [
+      'http://localhost:5173',
+      'https://vibe-todo-frontend-peach.vercel.app',
+    ],
   }),
 );
 app.use(express.json());
